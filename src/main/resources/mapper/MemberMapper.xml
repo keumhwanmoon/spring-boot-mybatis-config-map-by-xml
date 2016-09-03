@@ -1,0 +1,7 @@
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jason.mapper.MemberMapper">
+    <select id="findMembers" resultType="com.jason.domain.Member">
+        SELECT id, name FROM MEMBER
+    </select>
+</mapper>
