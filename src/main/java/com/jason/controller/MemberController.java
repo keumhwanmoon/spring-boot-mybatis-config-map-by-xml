@@ -1,7 +1,7 @@
 package com.jason.controller;
 
 import com.jason.domain.Member;
-import com.jason.mapper.MemberMapper;
+import com.jason.service.MemberService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -15,11 +15,11 @@ import java.util.List;
 @Controller
 public class MemberController {
     @Autowired
-    MemberMapper memberMapper;
+    MemberService memberService;
 
-    @RequestMapping("/")
+    @RequestMapping
     @ResponseBody
     public List<Member> findMembers() {
-        return memberMapper.findMembers();
+        return memberService.findMembers();
     }
 }
